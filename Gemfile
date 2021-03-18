@@ -73,3 +73,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
     gem 'capistrano3-unicorn'
     # 以下省略
   end
+gem 'unicorn'
