@@ -1,0 +1,17 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="blog-text">
+    <p><strong>タイトル</strong>：<%= @blog_in.title %></p>
+    <p><strong>内容</strong>：<%= @blog_in.content %></p>
+  </div>
+  <p>コメント一覧（ここから下の内容が重要）</p>
+  <!-- このcomments_areaというHTMLのidを取得して、そのdivの部分だけを更新する -->
+  <div id="comments_area">
+    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog_in } %>
+  </div>
+  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, blog: @blog_in } %>
+  <%= link_to '編集', edit_blog_in_path(@blog_in) %> |
+  <%= link_to '戻る', blog_ins_path %>
+</div>
