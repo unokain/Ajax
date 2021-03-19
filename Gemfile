@@ -50,6 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
+  gem 'graphiql-rails'
 end
 
 group :test do
@@ -73,4 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
     gem 'capistrano3-unicorn'
     # 以下省略
   end
-gem 'unicorn'
+gem 'graphql'
